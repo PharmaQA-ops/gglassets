@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Asset | GGL Asset Tracker</title>
+
+  <meta
+    name="description"
+    content="GGL Asset Information"
+  >
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body class="asset-page">
+
+
+<header class="topbar">
+
+  <a
+    href="./"
+    class="brand brand-link"
+  >
+
+    <div class="brand-mark">
+      GGL
+    </div>
+
+    <div>
+
+      <div class="brand-title">
+        GGL Asset Tracker
+      </div>
+
+      <div class="brand-subtitle">
+        Gaerish Logistics Pvt Ltd
+      </div>
+
+    </div>
+
+  </a>
+
+
+  <div class="header-actions">
+
+    <a
+      href="./"
+      class="header-link"
+    >
+      Search Assets
+    </a>
+
+    <div class="header-status">
+
+      <span class="status-dot"></span>
+
+      Online
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<main class="container asset-container">
+
+
+  <div
+    id="assetLoading"
+    class="asset-loading"
+  >
+
+    <div class="loader"></div>
+
+    <h2>
+      Loading asset...
+    </h2>
+
+    <p>
+      Retrieving asset information.
+    </p>
+
+  </div>
+
+
+
+  <div
+    id="assetError"
+    class="message-card error-card hidden"
+  >
+
+    <div class="error-icon">
+      !
+    </div>
+
+    <h2>
+      Asset Not Found
+    </h2>
+
+    <p id="assetErrorText">
+      The requested asset could not be found.
+    </p>
+
+    <a
+      href="./"
+      class="primary-button"
+    >
+      Search Assets
+    </a>
+
+  </div>
+
+
+
+  <div
+    id="assetContent"
+    class="hidden"
+  >
+
+
+    <section class="asset-hero">
+
+      <div>
+
+        <span class="eyebrow">
+          COMPANY ASSET
+        </span>
+
+        <h1
+          id="assetNumber"
+        >
+          —
+        </h1>
+
+        <p
+          id="assetDescription"
+          class="asset-description"
+        >
+          —
+        </p>
+
+      </div>
+
+
+      <div
+        id="assetStatus"
+        class="status-badge"
+      >
+        —
+      </div>
+
+    </section>
+
+
+
+    <section class="asset-layout">
+
+
+      <div class="asset-main">
+
+
+        <div class="panel">
+
+          <div class="panel-header">
+
+            <div>
+
+              <span class="section-label">
+                ASSET INFORMATION
+              </span>
+
+              <h2>
+                Asset Details
+              </h2>
+
+            </div>
+
+          </div>
+
+
+          <div
+            id="assetDetails"
+            class="details-grid"
+          ></div>
+
+        </div>
+
+
+
+        <div class="panel">
+
+          <div class="panel-header">
+
+            <div>
+
+              <span class="section-label">
+                CURRENT ASSIGNMENT
+              </span>
+
+              <h2>
+                Assignment
+              </h2>
+
+            </div>
+
+          </div>
+
+
+          <div
+            id="assignmentDetails"
+            class="details-grid"
+          ></div>
+
+        </div>
+
+
+
+        <div class="panel">
+
+          <div class="panel-header">
+
+            <div>
+
+              <span class="section-label">
+                MAINTENANCE
+              </span>
+
+              <h2>
+                Maintenance History
+              </h2>
+
+            </div>
+
+          </div>
+
+
+          <div
+            id="maintenanceList"
+            class="history-list"
+          ></div>
+
+        </div>
+
+
+
+        <div class="panel">
+
+          <div class="panel-header">
+
+            <div>
+
+              <span class="section-label">
+                TRANSFERS
+              </span>
+
+              <h2>
+                Transfer History
+              </h2>
+
+            </div>
+
+          </div>
+
+
+          <div
+            id="transferList"
+            class="history-list"
+          ></div>
+
+        </div>
+
+
+
+        <div class="panel">
+
+          <div class="panel-header">
+
+            <div>
+
+              <span class="section-label">
+                AUDIT
+              </span>
+
+              <h2>
+                Audit History
+              </h2>
+
+            </div>
+
+          </div>
+
+
+          <div
+            id="auditList"
+            class="history-list"
+          ></div>
+
+        </div>
+
+
+      </div>
+
+
+
+      <aside class="asset-sidebar">
+
+
+        <div class="qr-panel">
+
+          <span class="section-label">
+            ASSET QR
+          </span>
+
+          <div class="qr-wrapper">
+
+            <img
+              id="assetQR"
+              src=""
+              alt="Asset QR Code"
+            >
+
+          </div>
+
+          <div
+            id="qrAssetNumber"
+            class="qr-number"
+          >
+            —
+          </div>
+
+          <p>
+            Scan this QR code to open this asset record.
+          </p>
+
+        </div>
+
+
+
+        <div class="panel compact-panel">
+
+          <span class="section-label">
+            QUICK STATUS
+          </span>
+
+          <div
+            id="quickStatus"
+            class="quick-status"
+          ></div>
+
+        </div>
+
+
+
+        <div class="panel compact-panel">
+
+          <span class="section-label">
+            RECORD
+          </span>
+
+          <div
+            id="recordDetails"
+            class="record-details"
+          ></div>
+
+        </div>
+
+
+      </aside>
+
+
+    </section>
+
+
+  </div>
+
+</main>
+
+
+
+<footer class="footer">
+
+  <div>
+    © <span id="year"></span>
+    Gaerish Logistics Pvt Ltd
+  </div>
+
+  <div>
+    GGL Asset Tracker
+  </div>
+
+</footer>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
