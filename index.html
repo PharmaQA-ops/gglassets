@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GGL Asset Tracker</title>
+
+  <meta
+    name="description"
+    content="Gaerish Logistics Pvt Ltd Asset Tracker"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="topbar">
+
+    <div class="brand">
+
+      <div class="brand-mark">
+        GGL
+      </div>
+
+      <div>
+        <div class="brand-title">
+          GGL Asset Tracker
+        </div>
+
+        <div class="brand-subtitle">
+          Gaerish Logistics Pvt Ltd
+        </div>
+      </div>
+
+    </div>
+
+    <div class="header-status">
+
+      <span class="status-dot"></span>
+
+      <span>
+        System Online
+      </span>
+
+    </div>
+
+  </header>
+
+
+  <main class="container">
+
+    <section class="hero">
+
+      <div>
+
+        <span class="eyebrow">
+          ASSET MANAGEMENT SYSTEM
+        </span>
+
+        <h1>
+          Search Company Assets
+        </h1>
+
+        <p>
+          Search by Asset No, Serial No, Model, Employee,
+          Department, Location or other asset information.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="search-panel">
+
+      <div class="search-box">
+
+        <span class="search-icon">
+          ⌕
+        </span>
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search asset number, serial number, employee..."
+          autocomplete="off"
+        >
+
+        <button
+          id="searchButton"
+          type="button"
+        >
+          Search
+        </button>
+
+      </div>
+
+      <div class="search-hint">
+        Example: GGL-AST-000001
+      </div>
+
+    </section>
+
+
+    <section
+      id="statsSection"
+      class="stats-grid"
+    >
+
+      <div class="stat-card">
+
+        <span class="stat-label">
+          Total Assets
+        </span>
+
+        <strong
+          id="totalAssets"
+          class="stat-value"
+        >
+          —
+        </strong>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <span class="stat-label">
+          Available
+        </span>
+
+        <strong
+          id="availableAssets"
+          class="stat-value"
+        >
+          —
+        </strong>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <span class="stat-label">
+          Assigned
+        </span>
+
+        <strong
+          id="assignedAssets"
+          class="stat-value"
+        >
+          —
+        </strong>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <span class="stat-label">
+          Maintenance
+        </span>
+
+        <strong
+          id="maintenanceAssets"
+          class="stat-value"
+        >
+          —
+        </strong>
+
+      </div>
+
+    </section>
+
+
+    <section class="results-section">
+
+      <div class="section-heading">
+
+        <div>
+
+          <span class="section-label">
+            SEARCH RESULTS
+          </span>
+
+          <h2 id="resultTitle">
+            Assets
+          </h2>
+
+        </div>
+
+        <span
+          id="resultCount"
+          class="result-count"
+        >
+          0 results
+        </span>
+
+      </div>
+
+
+      <div
+        id="loading"
+        class="message-card hidden"
+      >
+        <div class="loader"></div>
+        Searching assets...
+      </div>
+
+
+      <div
+        id="errorMessage"
+        class="message-card error-card hidden"
+      ></div>
+
+
+      <div
+        id="emptyMessage"
+        class="message-card"
+      >
+
+        <div class="empty-icon">
+          ◇
+        </div>
+
+        <h3>
+          Search for an asset
+        </h3>
+
+        <p>
+          Enter an Asset No, serial number, employee,
+          model or other asset information above.
+        </p>
+
+      </div>
+
+
+      <div
+        id="resultsGrid"
+        class="asset-grid"
+      ></div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="footer">
+
+    <div>
+      © <span id="year"></span>
+      Gaerish Logistics Pvt Ltd
+    </div>
+
+    <div>
+      GGL Asset Tracker
+    </div>
+
+  </footer>
+
+
+  <script src="app.js"></script>
+
+</body>
+</html>
