@@ -14,7 +14,7 @@
  */
 
 const API_URL =
-  'PASTE_YOUR_APPS_SCRIPT_EXEC_URL_HERE';
+  'https://script.google.com/macros/s/AKfycbz3SMOD8AI1Xnrd65zP9FcA8fiDQJWtFQRzfd7uXdpMyZfPdp5PN19pQLIAqUdmUuvgNw/exec';
 
 
 
